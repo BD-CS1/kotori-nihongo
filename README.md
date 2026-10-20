@@ -2,6 +2,8 @@
 
 手機優先的免費日語學習 PWA，繁體中文介面。使用靜態 HTML、CSS、JavaScript，沒有付費 API、廣告 SDK 或追蹤程式。所有教材與進度都在瀏覽器端使用；未串接帳號同步或付費語音。
 
+立即使用：[開啟 Kotori 日語學習室](https://bd-cs1.github.io/kotori-nihongo/)
+
 ## 使用內容
 
 - 五十音：46 個清音的平／片假名、92 字筆順、58 組濁音／半濁音／拗音，以及觸控自由手寫。手寫不做正確率評分。
@@ -43,7 +45,7 @@ npm install --prefix /tmp/kotori-qa --no-save linkedom
 KOTORI_QA_ROOT=/tmp/kotori-qa node tools/check.mjs
 ```
 
-驗證範圍為 DOM 渲染與操作邏輯、題庫品質、進度、匯入驗證、文章內容轉義及真實 Kuromoji worker 的詞典分析。自動化驗證沒有實機瀏覽器；觸控、語音、麥克風、PWA 安裝與手機版面需要裝置驗證。
+驗證範圍為 DOM 渲染與操作邏輯、題庫品質、進度、匯入驗證、文章內容轉義及真實 Kuromoji worker 的詞典分析。GitHub Pages 首次發布後，另以桌面瀏覽器確認六個學習單元與闖關頁面可載入，並以兩句日文成功完成真實詞典解析。觸控、裝置語音、麥克風、PWA 安裝與手機版面仍需要裝置驗證。
 
 ## 授權出處
 
