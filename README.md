@@ -22,7 +22,15 @@ Web Speech API 僅使用裝置可用的日文語音；缺少語音時會提示�
 
 ## 執行與部署
 
-`dist/` 可直接部署到支援 HTTPS 的靜態託管服務。PWA 安裝、麥克風及 service worker 需要安全環境。本站目前透過 Sites 私人部署；部署設定在 `.openai/hosting.json`。
+`dist/` 可直接部署到支援 HTTPS 的靜態託管服務。PWA 安裝、麥克風及 service worker 需要安全環境。Sites 部署設定在 `.openai/hosting.json`。
+
+### GitHub Pages 免費發布
+
+已附 `.github/workflows/pages.yml`，直接發布 `dist/`，不需要編譯、API 金鑰或第三方部署服務。使用 GitHub 官方 Actions；推送 `main` 的網站檔案變更後會自動更新，也可手動執行。
+
+GitHub Free 僅支援公開儲存庫的 Pages。請先確認可公開原始碼與提交歷史，再將儲存庫改為 Public。在 **Settings → Pages → Build and deployment → Source** 選 **GitHub Actions**，接著到 **Actions → Publish Kotori to GitHub Pages → Run workflow** 執行第一次發布。尚未公開時，部署工作會跳過，不消耗私人儲存庫的執行額度。
+
+站點採用相對路徑與 hash 路由，支援 GitHub 專案網站的子目錄網址。對外發布的檔案只有 `dist/`。GitHub Pages 不會上傳瀏覽器中保存的學習進度、匯入文章或錄音；切換網址後，需自行匯出／匯入進度 JSON。
 
 沒有編譯步驟與執行時 npm 依賴。`tools/fetch-assets.py` 重新下載 Kuromoji 0.1.2 及 KanjiVG 的基本假名路徑；目前完整資料已包含在 `dist/assets`。
 
