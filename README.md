@@ -22,6 +22,14 @@ Web Speech API 僅使用裝置可用的日文語音；缺少語音時會提示�
 
 進度只存於目前瀏覽器 localStorage。錄音僅留在本次頁面。無伺服器同步。離線資源以 service worker 快取，私人站點登入與部分裝置語音仍可能需要連網。靜態託管供應商的額度依其服務條件，程式不要求任何 API 金鑰。
 
+## 語音安裝圖卡
+
+免費日文語音的裝置安裝方法，包含 iPhone／iPad、Android、Windows、Mac，以及 APP 重新偵測與試聽步驟。
+
+- [A4 PDF 列印版](docs/voice-guide/Kotori_Japanese_Voice_Install_A4.pdf)
+- [300 dpi PNG 圖卡](docs/voice-guide/Kotori_Japanese_Voice_Install_A4.png)
+- [圖卡說明與預覽](docs/voice-guide/README.md)
+
 ## 執行與部署
 
 `dist/` 可直接部署到支援 HTTPS 的靜態託管服務。PWA 安裝、麥克風及 service worker 需要安全環境。Sites 部署設定在 `.openai/hosting.json`。
